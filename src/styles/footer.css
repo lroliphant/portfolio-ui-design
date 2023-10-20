@@ -1,0 +1,14 @@
+@import 'variables.css'; 
+
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background: var(--color--grey--900);
+}
+
+.footer__content-wrapper {
+  padding-left: 32px;
+  padding-right: 32px;
+}

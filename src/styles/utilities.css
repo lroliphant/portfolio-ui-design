@@ -1,0 +1,25 @@
+.numeral-0 {
+  /* font-feature-settings: "ss06"; */
+  /* font-feature-settings: var(--font--feature-settings-no-stylized-numeral-0); */
+}
+
+.u-rel {
+  position: relative;
+ }
+
+ .ml-auto {
+  margin-left: auto;
+ }
+
+ .ml-8 {
+  margin-left: 8px;
+ }
+
+ .ml-20 {
+  margin-left: 20px;
+ }
+
+ .fl-s {
+  flex-shrink: 0;
+ }
+

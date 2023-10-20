@@ -1,0 +1,32 @@
+{
+  "name": "portfolio-ui-design",
+  "version": "1.0.0",
+  "description": "UI design portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lroliphant/portfolio-ui-design.git"
+  },
+  "keywords": [
+    "UI",
+    "Design"
+  ],
+  "author": "Lucy Oliphant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lroliphant/portfolio-ui-design/issues"
+  },
+  "homepage": "https://github.com/lroliphant/portfolio-ui-design#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.1"
+  },
+  "dependencies": {
+    "browserslist": "^4.22.1",
+    "lightningcss": "^1.22.0"
+  }
+}

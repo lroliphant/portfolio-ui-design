@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ title }}</title>
+		<meta name="title" content="{{ title }}">
+		<meta name="description" content="{{ global.description }}">
+		<meta name="keywords" content="{{ global.keywords }}">
+		<meta name="author" content="{{ global.name }}">
+		<meta name="robots" content="index, follow">
+		<link rel="canonical" href="{{ global.url | url }}{{ page.url }}">
+		<link rel="shortcut icon" type="image/png" href="{{ '/images/logo/favicon.png' | url }}">
+		<link rel="preload" href="/fonts/Roobert-Medium.woff2" crossorigin as="font" type="font/woff2">
+		<link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+
+    <link rel="icon" href="{{ '/images/logo/favicon.ico' }}" sizes="any">
+    <link rel="icon" href="{{ '/images/logo/logo.svg' }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/images/logo/180.png' }}">
+    <link rel="manifest" href="../manifest.json">
+
+	</head>	
+
+	<body class="">
+		<div class="h-full">
+			{% include "partials/header.njk" %}
+			{# <div class="b-f-wrapper"> #}
+				<main class="">
+					{{ content | safe }}
+				</main>
+				{% include "partials/footer.njk" %}
+			{# </div> #}
+		</div>
+		
+		{# <script src="{{ '/scripts/bundle.js' | url }}"></script> #}
+	</body>
+
+</html>
