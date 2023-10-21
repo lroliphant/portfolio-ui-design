@@ -23,15 +23,9 @@
 	</head>	
 
 	<body class="">
-		<div class="h-full">
 			{% include "partials/header.njk" %}
-			{# <div class="b-f-wrapper"> #}
-				<main class="">
-					{{ content | safe }}
-				</main>
-				{% include "partials/footer.njk" %}
-			{# </div> #}
-		</div>
+			{{ content | safe }}
+			{% include "partials/footer.njk" %}
 		
 		{# <script src="{{ '/scripts/bundle.js' | url }}"></script> #}
 	</body>
