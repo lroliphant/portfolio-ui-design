@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "rm -rf dist && eleventy"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,10 @@
   "homepage": "https://github.com/lroliphant/portfolio-ui-design#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.1"
+    "@11ty/eleventy-img": "^3.1.1",
+    "esbuild": "^0.19.5",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.22.0"
   },
   "dependencies": {
     "browserslist": "^4.22.1",

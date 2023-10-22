@@ -1,5 +1,6 @@
 @import 'variables.css';
 @import 'layout.css';
+@import 'resets.css';
 @import 'utilities.css';
 
 @font-face {
@@ -32,15 +33,6 @@ body, html {
   text-rendering: optimizeLegibility;
 }
 
-h2 {
-  font-size: var(--font--size-5xlarge);
-}
-
-.main {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
 
 /* Header
 ----------------------------------------------------------------------------- */
@@ -48,20 +40,25 @@ h2 {
 .header {
   position: sticky;
   top: 0px;
-  backdrop-filter: blur(30px) saturate(120%);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px) saturate(180%);
   display: flex;
   place-content: center space-between;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header__text {
   font-size: var(--font--size-medium);
+
+  transition: opacity 200ms ease-out 200ms;
 }
 
-.nav {
-
+.header__text--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-in
 }
 
 
@@ -115,13 +112,192 @@ h2 {
 
 
 
-
-
 /* Main content area
 ----------------------------------------------------------------------------- */
 
+.main {
+  overflow: scroll;
+  height: 100%;
 
+  padding-top: 108px;
+  padding-bottom: 108px;
+}
+
+.subtitle {
+  font-size: var(--font--size-regular);
+  text-transform: uppercase;
+  color: var(--color--grey-600);
+  letter-spacing: 0.2rem;
+  padding-bottom: 1rem;
+}
+
+.intro__title {
+  font-size: var(--font--size-5xlarge);
+  line-height: 0.95;
+  padding-bottom: 1.6rem;
+  letter-spacing: -0.2rem;
+}
+
+.intro__copy {
+  font-size: var(--font--size-large);
+  color: var(--color--grey-500);
+  letter-spacing: 0.05rem;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 612px;
+}
+
+.intro__dot {
+  height: 8px;
+  width: 8px;
+  background-color: var(--color--orange-base);
+  border-radius: 50%;
+  display: inline-flex;
+  margin: 0 12px 0 2px;
+}
+
+.intro__dot--orange {
+  background-color: var(--color--orange-base);
+}
+
+.intro__dot--pink {
+  background-color: var(--color--pink-base);
+}
 
 
 /* Footer
 ----------------------------------------------------------------------------- */
+.footer {
+  background: var(--color--grey-900);
+  padding-bottom: 12px;
+}
+
+.footer__logo {
+  width: 48px;
+  height: 48px;
+}
+
+.footer__col1 {
+  color: var(--color--grey-50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 80px;
+}
+
+.footer__col3 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  column-gap: 20px;
+}
+
+.footer__subtitle {
+  text-transform: uppercase;
+  color: var(--color--grey-400);
+}
+
+.footer__block {
+  display: flex;
+  -moz-box-align: end;
+  align-items: end;
+  color: var(--color--grey-400);
+  font-size: var(--font--size-small);
+}
+
+.footer__block--right {
+  justify-content: end;
+}
+
+.footer__items {
+  display: flex;
+  -moz-box-align: end;
+  align-items: end;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.footer__item {
+  list-style-type: none;
+}
+
+.footer__link--email {
+  color: var(--color--grey-50);
+  font-size: var(--font--size-medium);
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+
+.footer__link {
+  cursor: pointer;
+  color: var(--color--grey-50);
+  text-decoration: none;
+  position: relative;
+}
+
+.footer__link--secondary {
+  font-size: var(--font--size-small);
+}
+
+/* FIX ME */
+
+.footer__link--email::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  border-bottom: 2px solid var(--color--pink-base);
+  /* margin-top: 5px; */
+}
+
+.footer__link:hover {
+  color: var(--color--grey-50);
+}
+
+.footer__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color--orange-base);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+
+
+.footer__link:hover::before {
+  transform: scaleX(1);
+}
+
+.footer__link--email:hover {
+  color: var(--color--grey-50);
+}
+
+.footer__link--email::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color--orange-base);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+
+.footer__link--email:hover::before {
+  transform: scaleX(1);
+}

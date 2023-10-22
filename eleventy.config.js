@@ -1,6 +1,8 @@
 const browserslist = require("browserslist");
 const { bundle, browserslistToTargets, composeVisitors } = require("lightningcss");
 
+const esbuild = require('esbuild');
+
 module.exports = (config) => {
   // config.setDataDeepMerge(true); // what does this do?
 
@@ -15,10 +17,29 @@ module.exports = (config) => {
 
   config.addLayoutAlias("base", "layouts/base.njk");
 
-  // config.addFilter("readableDate", require("./lib/filters/readableDate")); // add npm package to do this
-  // config.addFilter("minifyJs", require("./lib/filters/minifyJs"));
+  // JavaScript
+	config.addTemplateFormats('js');
 
-  // config.addTransform("minifyHtml", require("./lib/transforms/minifyHtml")); // what does this do?
+	config.addExtension('js', {
+		outputFileExtension: 'js',
+		compile: async (content, path) => {
+			if (path !== './src/scripts/index.js') {
+				return;
+			}
+
+			return async () => {
+				let { outputFiles } = await esbuild.build({
+					target: 'es2020',
+					entryPoints: [path],
+					minify: true,
+					bundle: true,
+					write: false,
+				});
+
+				return outputFiles[0].text;
+			};
+		},
+	});
 
   return {
     dir: {

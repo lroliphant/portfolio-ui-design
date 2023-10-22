@@ -1,40 +1,87 @@
 @import "variables.css";
 
-
 .numeral-0 {
   /* font-feature-settings: "ss06"; */
   /* font-feature-settings: var(--font--feature-settings-no-stylized-numeral-0); */
 }
 
-/* .u-container {
-  padding-left: var(--page-padding-left);
-  padding-right: var(--page-padding-right);
-  max-width: calc(var(--page-max-width) + var(--page-padding-left) + var(--page-padding-right));
-  width: 100%;
-  margin: 0px auto;
-} */
-
 .u-rel {
   position: relative;
  }
 
-/* .u-h100 {
-  height: 100%;
-} */
-
- .ml-auto {
+.ml-auto {
   margin-left: auto;
- }
+}
 
- /* .ml-8 {
-  margin-left: 8px;
- } */
-
- .ml-20 {
+.ml-20 {
   margin-left: 20px;
- }
+}
 
- .fl-s {
-  flex-shrink: 0;
- }
+.t-up {
+  text-transform: uppercase;
+}
 
+
+/* text
+----------------------------------------------------------------------------- */
+
+.tx-sm {
+  font-size: var(--font--size-small);
+}
+
+.tx-base {
+  font-size: var(--font--size-regular);
+}
+
+.tx-md {
+  font-size: var(--font--size-medium);
+}
+
+.tx-lg {
+  font-size: var(--font--size-large);
+}
+
+.tx-xl {
+  font-size: var(--font--size-xlarge);
+}
+
+.tx-2xl {
+  font-size: var(--font--size-2xlarge);
+}
+
+.tx-3xl {
+  font-size: var(--font--size-3xlarge);
+}
+
+.tx-4xl {
+  font-size: var(--font--size-4xlarge);
+}
+
+.tx-5xl {
+  font-size: var(--font--size-5xlarge);
+}
+
+
+
+/* spacing
+----------------------------------------------------------------------------- */
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+.pb-32 {
+  padding-bottom: 32px;
+}

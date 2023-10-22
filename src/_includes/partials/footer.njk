@@ -1,30 +1,33 @@
-<footer class="footer">
+<footer class="footer column">
 	<div class="footer__content-wrapper">
-		<div class="footer_content">
-
+		<div class="footer__col1">
+			<svg class="footer__logo pb-16" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 7.5122C0 3.41463 4.43903 0 10.2439 0H13.6585V42.3415H28.6829C33.4634 42.3415 36.878 46.7805 36.878 52.5854V56H8.19512C3.7561 56 0 52.2439 0 45.7561V7.5122Z" fill="#F87854"/>
+				<path d="M56 48.4878C56 52.5854 51.561 56 45.7561 56H42.3415V13.6585H27.3171C22.5366 13.6585 19.122 9.21951 19.122 3.41463V0H47.8049C52.2439 0 56 3.7561 56 10.2439V48.4878Z" fill="#F85775"/>
+			</svg>
+			<p class="tx-lg pb-24">Exploring new opportunities</p>
+			<p class="footer__subtitle pb-8">Get in touch</p>
+			<a href="mailto:lucyroseoliphant@gmail.com" class="footer__link footer__link--email" target="_blank">lucyroseoliphant@gmail.com</a>
 		</div>
-		<div class="footer_content">
+		<div class="footer__col3">
 			<div class="footer__block footer__block--left">
-				left copy
-				{{ page.date.getFullYear() }}
+				Built by me<br>
+				Powered by 11ty
 			</div>
-			<div class="footer__block footer__block--center">
-				<ul class="footer__list">
-						<li class="footer__item">
-							<a class="footer__link" href="https://github.com/lroliphant" rel="me" target="_blank">
-								Github
-							</a>
-						</li>
-						<li class="footer__item">
-							<a class="footer__link" href="https://www.linkedin.com/in/lucy-oliphant-67590227/" rel="me" target="_blank">
-								LinkedIn
-							</a>
-						</li>
-				</ul>
-			</div>
+			<ul class="footer__items">
+				<li class="footer__item">
+					<a class="footer__link footer__link--secondary" href="https://github.com/lroliphant" rel="me" target="_blank">
+						Github
+					</a>
+				</li>
+				<li class="footer__item">
+					<a class="footer__link footer__link--secondary" href="https://www.linkedin.com/in/lucy-oliphant-67590227/" rel="me" target="_blank">
+						LinkedIn
+					</a>
+				</li>
+			</ul>
 			<div class="footer__block footer__block--right">
-				left copy
-				{{ page.date.getFullYear() }}
+				&#169; {{ page.date.getFullYear() }}
 			</div>
 		</div>
 	</div>
