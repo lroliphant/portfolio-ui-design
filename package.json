@@ -29,7 +29,6 @@
     "terser": "^5.22.0"
   },
   "dependencies": {
-    "browserslist": "^4.22.1",
-    "lightningcss": "^1.22.0"
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.2.0"
   }
 }

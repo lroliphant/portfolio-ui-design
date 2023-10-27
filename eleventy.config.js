@@ -1,10 +1,8 @@
-const browserslist = require("browserslist");
-const { bundle, browserslistToTargets, composeVisitors } = require("lightningcss");
+const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss");
 
 const esbuild = require('esbuild');
 
 module.exports = (config) => {
-  // config.setDataDeepMerge(true); // what does this do?
 
   // to recognize our file and include in the build directory
   config.addPassthroughCopy("src/images/**/*");
@@ -16,6 +14,9 @@ module.exports = (config) => {
   config.addWatchTarget("/src/styles/");
 
   config.addLayoutAlias("base", "layouts/base.njk");
+
+	// lightening css 11ty plugin
+	config.addPlugin(lightningCSS);
 
   // JavaScript
 	config.addTemplateFormats('js');
