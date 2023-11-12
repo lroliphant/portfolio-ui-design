@@ -31,5 +31,9 @@
   --color--grey-800: #262626;
   --color--grey-900: #171717;
   --color--text-primary: #171717;
+
+  --section--padding-small: clamp(2.4rem, 8vw, 8rem);
+  --section--padding-medium: clamp();
+  --section--padding-large: clamp();
 }
 
