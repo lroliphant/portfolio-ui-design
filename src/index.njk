@@ -3,8 +3,8 @@ title: Lucy Oliphant - UI Designer
 layout: "base.njk"
 ---
 
-<main class="main column">
-	<section class="">
+<main class="main">
+	<section class="" data-scroll-section>
 		<div class="">
 			<div class="intro">
 				<h2 class="subtitle">About me</h2>
@@ -14,8 +14,92 @@ layout: "base.njk"
 				<p class="intro__copy">
 					I love developing and maintaining design systems<span class="intro__dot intro__dot--orange"></span>I love crafting beautiful interfaces<span class="intro__dot intro__dot--pink"></span>I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences<span class="intro__dot intro__dot--orange"></span>
 				</p>
-				<a href="/about" class="">Learn more (add icon)</a>
+				<a href="/about" class="btn-link">
+					<span>Learn more</span>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M8.46967 2.46967C8.76256 2.17678 9.23744 2.17678 9.53033 2.46967L14.5303 7.46967C14.8232 7.76256 14.8232 8.23744 14.5303 8.53033L9.53033 13.5303C9.23744 13.8232 8.76256 13.8232 8.46967 13.5303C8.17678 13.2374 8.17678 12.7626 8.46967 12.4697L12.1893 8.75H2C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25H12.1893L8.46967 3.53033C8.17678 3.23744 8.17678 2.76256 8.46967 2.46967Z" fill="#171717"/>
+						</svg>
+				</a>
 			</div>
 		</div>
 	</section>
+	<section class="section horizontal-items" data-scroll-section>
+		<div class="thumbs-container container">    
+			<div class="row row--1"                data-scroll 
+			data-scroll-direction="horizontal" 
+			data-scroll-speed="-1">
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="row row--2">
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+				<div class="flex-col">
+					<div class="horizontal-single-item">
+						<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png">
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+ </section>
+	{# <div class="section-end">
+		<div class="btm-semi-circle-wrap">
+			<div class="btm-semi-circle"></div>
+		</div>
+	</div> #}
 </main>
+

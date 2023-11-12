@@ -29,6 +29,8 @@
     "terser": "^5.22.0"
   },
   "dependencies": {
-    "@11tyrocks/eleventy-plugin-lightningcss": "^1.2.0"
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.2.0",
+    "gsap": "^3.12.2",
+    "locomotive-scroll": "^4.1.4"
   }
 }
