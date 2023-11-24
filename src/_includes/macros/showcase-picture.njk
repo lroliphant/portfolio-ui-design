@@ -1,0 +1,5 @@
+{% macro showcasePicture(
+	name, alt=""
+) %}
+	<img src="/images/work/showcase/{{ name }}.jpg" sizes="(max-width: 479px) 0px, (max-width: 991px) 100vw, 29vw" srcset="/images/work/showcase/{{ name }}-800.webp 800w, /images/work/showcase/{{ name }}-1080.webp 1080w, /images/work/showcase/{{ name }}-1600.webp 1600w, /images/work/showcase/{{ name }}-2400.webp 2400w, /images/work/showcase/{{ name }}-3200.webp 3200w" alt="{{ alt }}" class="flex_asset">
+{% endmacro %}
