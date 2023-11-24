@@ -2,9 +2,8 @@
   --font--family: "Some font", system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   --font--style: normal;
   --font--weight: 500;
-  --font--feature-settings: "liga", "ss06";
-  /* --font--feature-settings-no-stylized-numeral-8: "ss06" 0; */
-  /* --font--size-5xlarge: clamp(76px, 5.14vw, 5.14vw); */
+  --font--feature-settings: "ss02", "ss04", "ss06";
+  --font--size-huge: clamp(6.1rem, 3vw, 3vw);
   --font--size-5xlarge: 7.6rem;
   --font--size-4xlarge: 6.1rem;
   --font--size-3xlarge: 4.9rem;

@@ -1,5 +1,13 @@
-.column {
+.main {
+  padding-block: 60px 192px;
+}
+
+.section, .column {
   padding-inline: 32px;
+}
+
+.section {
+  padding-block-end: 80px;
 }
 
 /* .container {
@@ -10,27 +18,10 @@
   padding-right: var(--container--padding);
 } */
 
-.fw-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* .section {
-  display: block;
-  position: relative;
-  padding-top: var(--section--padding);
-  padding-bottom: var(--section--padding);
-} */
-
-.main {
-  padding-block: 60px 192px;
-}
-
-
 /* mobile */
 @media (width < 1024px) {
-  .column {
-    padding-inline: 20px
+  .section, .column {
+    padding-inline: 20px;
   }
 
   .main {
@@ -55,7 +46,7 @@
 
 /* desktop */
 @media (width >= 1760px) {
-  .column {
+  .section, .column {
     padding-inline: calc(50% - 838px);
   }
 

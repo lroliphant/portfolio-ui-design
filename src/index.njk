@@ -3,106 +3,108 @@ title: Lucy Oliphant - UI Designer
 layout: "base.njk"
 ---
 
-{# intro #}
-<section class="main column" data-scroll-section>
-	<div class="main__gaps">
-		<div class="intro">
-			<picture class="intro__picture intro__picture--home">
-				<source srcset="/images/intro/intro-pic-2000.webp 2000w,/images/intro/intro-pic-1280.webp 1280w,/images/intro/intro-pic-960.webp 960w,/images/intro/intro-pic-640.webp 640w" sizes="(min-width: 1760px) 616px,(min-width: 1024) calc(75vw - 20px - 2 * 42px),calc(100vw - 2 * 20px)" type="image/webp">
-				<img class="intro__photo" src="/images/intro/intro-pic-2000.jpg" width="640" height="640" fetchpriority="high" alt="Black and white photo">
-			</picture>
-			{# <h2 class="subtitle">About me</h2> #}
-			<h2 class="intro__title">
-				UI designer and former developer, based in London.
-			</h2>
-			<p class="intro__copy">
-				I love developing and maintaining design systems<span class="intro__dot intro__dot--orange"></span>I love crafting beautiful interfaces<span class="intro__dot intro__dot--pink"></span>I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences<span class="intro__dot intro__dot--orange"></span>
-			</p>
-			{# <a href="/about" class="btn-link">
-				<span>Learn more</span>
-				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.46967 2.46967C8.76256 2.17678 9.23744 2.17678 9.53033 2.46967L14.5303 7.46967C14.8232 7.76256 14.8232 8.23744 14.5303 8.53033L9.53033 13.5303C9.23744 13.8232 8.76256 13.8232 8.46967 13.5303C8.17678 13.2374 8.17678 12.7626 8.46967 12.4697L12.1893 8.75H2C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25H12.1893L8.46967 3.53033C8.17678 3.23744 8.17678 2.76256 8.46967 2.46967Z" fill="#171717"/>
-					</svg>
-			</a> #}
-		</div>
-	</div>
-</section>
+{% from 'macros/intro-picture.njk' import introPicture with context %}
+{% from 'macros/showcase-picture.njk' import showcasePicture %}
 
-
-{# work links #}
-<section class="section" data-scroll-section>
-	<div class="container">
-		<div class="row">
-			<div>
-				<h2 class="subtitle">Selected work / 2019 - present</h2>
-				<p class="">
-					Design systems
+<main class="main">
+	{# intro #}
+	<section class="column section" data-scroll-section>
+		<div class="main__gaps">
+			<div class="intro">
+				{{ introPicture(context='home') }}
+				<h2 class="intro__title">
+					UI designer and former developer, based in London.
+				</h2>
+				<p class="intro__copy">
+					I love developing and maintaining design systems. I love crafting beautiful interfaces. I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences.
 				</p>
-				{# <a href="/about" class="btn-link">
-					<span>Learn more</span>
-					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M8.46967 2.46967C8.76256 2.17678 9.23744 2.17678 9.53033 2.46967L14.5303 7.46967C14.8232 7.76256 14.8232 8.23744 14.5303 8.53033L9.53033 13.5303C9.23744 13.8232 8.76256 13.8232 8.46967 13.5303C8.17678 13.2374 8.17678 12.7626 8.46967 12.4697L12.1893 8.75H2C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25H12.1893L8.46967 3.53033C8.17678 3.23744 8.17678 2.76256 8.46967 2.46967Z" fill="#171717"/>
-						</svg>
-				</a> #}
-			</div>
-			<div>
-				7bridges Design System
+				{# <div class="intro__btn">
+					<a href="/about" class="btn-link">
+						<span>Learn more</span>
+						{% include "svg/arrow-right.svg" %}
+					</a>
+				</div> #}
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-{# work thumbs #}
-<section class="section section--horizontal-items" data-scroll-section>
-	<div class="fw-container">    
-		<div class="row row--1" data-scroll 
-		data-scroll-direction="horizontal" 
-		data-scroll-speed="-2">
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					<img src="/image/work-thumb-1.jpg" class="flex-asset">
+	{# work links #}
+	<section class="column section" data-scroll-section>
+		<div class="work-list">
+			<h2 class="subtitle">Selected work</h2>
+	
+	
+			{# 		
+			divider #}
+			<div class="work-list__item">
+				<div class="work-list__title-wrap">
+					<h3 class="work-list__title">7bridges Design System</h3>
+					<p class="work-list__desc">
+						Some description
+					</p>
 				</div>
-			</div>
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					{# {% image "/images/work-thumb-1.jpg", "this is an alt description" %} #}
-				</div>
-			</div>
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png" class="flex-asset">
-				</div>
-			</div>
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png" class="flex-asset">
+				<div class="work-list__btn">
+					<a href="/about" class="btn-link">
+						<span>View case study</span>
+						{% include "svg/arrow-right.svg" %}
+					</a>
 				</div>
 			</div>
 		</div>
-		<div class="flex-grid row row--2" data-scroll 
-		data-scroll-direction="horizontal" 
-		data-scroll-speed="2">
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					{# {% image "work-thumb-1.jpg", "Design system components index", "flex-asset" %} #}
+	</section>
+
+	{# work thumbs #}
+	<section class="section section--showcase" data-scroll-section>
+		<div class="showcase-wrapper">    
+			<div class="showcase__grid-row showcase__grid-row--1" data-scroll 
+			data-scroll-direction="horizontal" 
+			data-scroll-speed="-2">
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-icons-1", alt="7b design system icons showcase image") }}
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-icons-2", alt="7b design system icons") }}
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-design-system", alt="7b design system preview") }}
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-docs-card", alt="Docs card designs") }}
+					</div>
 				</div>
 			</div>
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png" class="flex-asset">
+			<div class="showcase__grid-row showcase__grid-row--2" data-scroll 
+			data-scroll-direction="horizontal" 
+			data-scroll-speed="2">
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-sparklines", alt="7b UIs with sparklines") }}
+					</div>
 				</div>
-			</div>
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png" class="flex-asset">
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-data-vis", alt="7b simulations bar chart") }}
+					</div>
 				</div>
-			</div>
-			<div class="flex-item">
-				<div class="horizontal-single-item">
-					<img src="https://www.lucyoliphant.com/assets/img/thumb-buddy.png" class="flex-asset">
+				<div class="flex-item">
+					<div class="horizontal-single-item">
+						{{ showcasePicture(name="work-thumb-email", alt="7b tracking component designs") }}
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="horizontal-single-item"> 
+						{{ showcasePicture(name="work-thumb-tracking", alt="7b tracking component designs") }}
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</main>
 

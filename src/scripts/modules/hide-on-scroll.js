@@ -9,6 +9,8 @@ const headerTxt = document.querySelector('.header__text');
 document?.addEventListener('scroll', (e) => {
   const currPos = document.documentElement.scrollTop;
 
+  console.log(currPos);
+
   currPos > 72 || currPos > 72 ? headerTxt.classList.add('header__text--hidden') : headerTxt.classList.remove('header__text--hidden');
 
   e.preventDefault();
