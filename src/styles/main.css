@@ -152,7 +152,8 @@ p {
 	width: 100%;
 	height: auto;
   border-radius: 50%;
-  box-shadow: -12px 12px var(--color--orange-base), 12px 12px var(--color--pink-base);
+  /* box-shadow: -12px 12px var(--color--orange-base), 12px 12px var(--color--pink-base); */
+  box-shadow: -12px 12px var(--color--orange-base);
 }
 
 .intro__picture {
@@ -278,12 +279,12 @@ p {
 
   .intro__copy {
     grid-row: 3 / 4;
-		grid-column: 6 / span 3;
+		grid-column: 5 / span 3;
   }
 
   .intro__btn {
     grid-row: 4 / 5;
-		grid-column: 6 / span 3;
+		grid-column: 5 / span 3;
   }
 }
 
