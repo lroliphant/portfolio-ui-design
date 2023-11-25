@@ -6,105 +6,102 @@ layout: "base.njk"
 {% from 'macros/intro-picture.njk' import introPicture with context %}
 {% from 'macros/showcase-picture.njk' import showcasePicture %}
 
-<main class="main">
-	{# intro #}
-	<section class="column section" data-scroll-section>
-		<div class="main__gaps">
-			<div class="intro">
-				{{ introPicture(context='home') }}
-				<h2 class="intro__title">
-					UI designer and former developer, based in London.
-				</h2>
-				<p class="intro__copy">
-					I love developing and maintaining design systems. I love crafting beautiful interfaces. I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences.
+{# intro #}
+<section class="column section" data-scroll-section>
+	<div class="main__gaps">
+		<div class="intro">
+			{{ introPicture(context='home') }}
+			<h2 class="intro__title">
+				UI designer and former developer, based in London.
+			</h2>
+			<p class="intro__copy">
+				I love developing and maintaining design systems. I love crafting beautiful interfaces. I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences.
+			</p>
+			{# <div class="intro__btn">
+				<a href="/about" class="btn-link">
+					<span>Learn more</span>
+					{% include "svg/arrow-right.svg" %}
+				</a>
+			</div> #}
+		</div>
+	</div>
+</section>
+
+{# work links #}
+<section class="column section" data-scroll-section>
+	<div class="work-list">
+		<h2 class="subtitle">Recent work</h2>
+		{# 		
+		divider #}
+		<div class="work-list__item">
+			<div class="work-list__title-wrap">
+				<h3 class="work-list__title">7bridges Design System</h3>
+				<p class="work-list__desc">
+					Working on evoling the 7bridges design system
 				</p>
-				{# <div class="intro__btn">
-					<a href="/about" class="btn-link">
-						<span>Learn more</span>
-						{% include "svg/arrow-right.svg" %}
-					</a>
-				</div> #}
+			</div>
+			<div class="work-list__btn">
+				<a href="/about" class="btn-link">
+					<span>View case study</span>
+					{% include "svg/arrow-right.svg" %}
+				</a>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	{# work links #}
-	<section class="column section" data-scroll-section>
-		<div class="work-list">
-			<h2 class="subtitle">Selected work</h2>
-	
-	
-			{# 		
-			divider #}
-			<div class="work-list__item">
-				<div class="work-list__title-wrap">
-					<h3 class="work-list__title">7bridges Design System</h3>
-					<p class="work-list__desc">
-						Some description
-					</p>
-				</div>
-				<div class="work-list__btn">
-					<a href="/about" class="btn-link">
-						<span>View case study</span>
-						{% include "svg/arrow-right.svg" %}
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	{# work thumbs #}
-	<section class="section section--showcase" data-scroll-section>
-		<div class="showcase-wrapper">    
-			<div class="showcase__grid-row showcase__grid-row--1" data-scroll 
-			data-scroll-direction="horizontal" 
-			data-scroll-speed="-2">
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-icons-1", alt="7b design system icons showcase image") }}
-					</div>
-				</div>
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-icons-2", alt="7b design system icons") }}
-					</div>
-				</div>
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-design-system", alt="7b design system preview") }}
-					</div>
-				</div>
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-docs-card", alt="Docs card designs") }}
-					</div>
+{# work thumbs #}
+<section class="section section--showcase" data-scroll-section>
+	<div class="showcase-wrapper">    
+		<div class="showcase__grid-row showcase__grid-row--1" data-scroll 
+		data-scroll-direction="horizontal" 
+		data-scroll-speed="-2">
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-icons-1", alt="7b design system icons showcase image") }}
 				</div>
 			</div>
-			<div class="showcase__grid-row showcase__grid-row--2" data-scroll 
-			data-scroll-direction="horizontal" 
-			data-scroll-speed="2">
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-sparklines", alt="7b UIs with sparklines") }}
-					</div>
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-icons-2", alt="7b design system icons") }}
 				</div>
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-data-vis", alt="7b simulations bar chart") }}
-					</div>
+			</div>
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-design-system", alt="7b design system preview") }}
 				</div>
-				<div class="flex-item">
-					<div class="horizontal-single-item">
-						{{ showcasePicture(name="work-thumb-email", alt="7b tracking component designs") }}
-					</div>
-				</div>
-				<div class="flex-item">
-					<div class="horizontal-single-item"> 
-						{{ showcasePicture(name="work-thumb-tracking", alt="7b tracking component designs") }}
-					</div>
+			</div>
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-docs-card", alt="Docs card designs") }}
 				</div>
 			</div>
 		</div>
-	</section>
-</main>
+		<div class="showcase__grid-row showcase__grid-row--2" data-scroll 
+		data-scroll-direction="horizontal" 
+		data-scroll-speed="2">
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-sparklines", alt="7b UIs with sparklines") }}
+				</div>
+			</div>
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-data-vis", alt="7b simulations bar chart") }}
+				</div>
+			</div>
+			<div class="flex-item">
+				<div class="horizontal-single-item">
+					{{ showcasePicture(name="work-thumb-email", alt="7b tracking component designs") }}
+				</div>
+			</div>
+			<div class="flex-item">
+				<div class="horizontal-single-item"> 
+					{{ showcasePicture(name="work-thumb-tracking", alt="7b tracking component designs") }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 

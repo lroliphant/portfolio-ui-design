@@ -7,7 +7,7 @@
 }
 
 .section {
-  padding-block-end: 80px;
+  padding-block-end: 120px;
 }
 
 /* .container {
@@ -28,21 +28,10 @@
     padding-block: 40px 100px;
   }
 
-  .main__gaps {
+  /* .main__gaps {
     row-gap: 80px;
-  }
+  } */
 }
-
-/* tablet */
-/* @media (1024px <= width < 1760px) {
-  .column {
-    padding-inline: 40px
-  }
-
-  .main__gaps {
-    row-gap: 120px;
-  }
-} */
 
 /* desktop */
 @media (width >= 1760px) {
@@ -50,7 +39,7 @@
     padding-inline: calc(50% - 838px);
   }
 
-  .main__gaps {
+  /* .main__gaps {
     row-gap: 120px;
-  }
+  } */
 }

@@ -24,7 +24,9 @@
 		<div class="content-outer">
 			<div class="content-wrapper" data-scroll-container>
 				{% include "partials/header.njk" %}
-				{{ content | safe }}
+				<main class="main">
+					{{ content | safe }}
+				</main>
 				{% include "partials/footer.njk" %}
 			</div>
 			<script src="https://player.vimeo.com/api/player.js"></script>

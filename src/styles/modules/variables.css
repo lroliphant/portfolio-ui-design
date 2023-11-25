@@ -33,5 +33,7 @@
 
   --section--padding: clamp(4rem, 16vh, 8rem);
   --container--padding: clamp(2.4rem, 8vw, 4rem);
+
+  --grid--gutter: 2rem;
 }
 
