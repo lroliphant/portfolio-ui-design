@@ -1,0 +1,112 @@
+
+@media (width > 1024px) {
+  .ds-grid {
+    grid-gap: .3rem;
+    grid-template-areas:
+    "area-1  area-1  area-2  area-3  area-4  area-5 " 
+    "area-6  area-7  area-8  area-8  area-9  area-5 " 
+    "area-6  area-10 area-8  area-8  area-11 area-12" 
+    "area-13 area-14 area-15 area-16 area-16 area-17";
+    margin: 0 auto;
+    display: grid;
+  }
+}
+
+.ds-grid__item {
+  background: #f2f2f2;
+  min-height: 100px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  /* -webkit-mask-image:-webkit-radial-gradient(#fff,#000); */
+}
+
+.ds-grid__item img {
+  max-width: none;
+  width: 100%;
+}
+
+.ds-grid__item__container {
+
+}
+
+
+
+.ds-grid__item__content {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex
+}
+
+.ds-grid__item__title {
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  opacity: 0;
+  background: #00000080;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ds-grid__item__container,
+.ds-grid__item__title,
+.ds-grid__item a {
+  position: absolute;
+  inset: 0
+}
+
+
+.ds-grid__item:nth-child(1) {
+  grid-area:area-1
+}
+.ds-grid__item:nth-child(2) {
+  grid-area:area-2
+}
+.ds-grid__item:nth-child(3) {
+  grid-area:area-3
+}
+.ds-grid__item:nth-child(4) {
+  grid-area:area-4
+}
+.ds-grid__item:nth-child(5) {
+  grid-area:area-5
+}
+.ds-grid__item:nth-child(6) {
+  grid-area:area-6
+}
+.ds-grid__item:nth-child(7) {
+  grid-area:area-7
+}
+.ds-grid__item:nth-child(8) {
+  grid-area:area-8
+}
+.ds-grid__item:nth-child(9) {
+  grid-area:area-9
+}
+.ds-grid__item:nth-child(10) {
+  grid-area:area-10
+}
+.ds-grid__item:nth-child(11) {
+  grid-area:area-11
+}
+.ds-grid__item:nth-child(12) {
+  grid-area:area-12
+}
+.ds-grid__item:nth-child(13) {
+  grid-area:area-13
+}
+.ds-grid__item:nth-child(14) {
+  grid-area:area-14
+}
+.ds-grid__item:nth-child(15) {
+  grid-area:area-15
+}
+.ds-grid__item:nth-child(16) {
+  grid-area:area-16
+}
+.ds-grid__item:nth-child(17) {
+  grid-area:area-17
+}
