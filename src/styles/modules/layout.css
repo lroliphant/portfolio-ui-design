@@ -7,7 +7,7 @@
 }
 
 .section {
-  padding-block-end: 80px;
+  padding-block-end: 120px;
 }
 
 /* .container {
@@ -32,17 +32,6 @@
     row-gap: 80px;
   } */
 }
-
-/* tablet */
-/* @media (1024px <= width < 1760px) {
-  .column {
-    padding-inline: 40px
-  }
-
-  .main__gaps {
-    row-gap: 120px;
-  }
-} */
 
 /* desktop */
 @media (width >= 1760px) {
