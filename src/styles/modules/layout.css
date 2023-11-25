@@ -28,9 +28,9 @@
     padding-block: 40px 100px;
   }
 
-  .main__gaps {
+  /* .main__gaps {
     row-gap: 80px;
-  }
+  } */
 }
 
 /* tablet */
@@ -50,7 +50,7 @@
     padding-inline: calc(50% - 838px);
   }
 
-  .main__gaps {
+  /* .main__gaps {
     row-gap: 120px;
-  }
+  } */
 }
