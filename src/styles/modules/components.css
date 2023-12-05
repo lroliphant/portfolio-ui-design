@@ -1,0 +1,70 @@
+/* Button
+----------------------------------------------------------------------------- */
+
+.btn-link {
+  font-size: var(--font--size-regular);
+  line-height: 1;
+  border-radius: 40px;
+  padding: 19px 30px;
+  color: var(--color--grey-900);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1.5px solid var(--color--grey-900);
+  column-gap: 12px;
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
+}
+
+.btn-link:hover {
+  transition: all .2s ease;
+  border: 1.5px solid transparent;
+  color: #fff;
+  background-color: var(--color--grey-900);
+}
+
+.btn-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-link:hover path {
+  fill: #fff;
+}
+
+
+
+/* Inline link
+----------------------------------------------------------------------------- */
+
+.inline-link {
+  color: var(--color--grey-500);
+  background-image: linear-gradient(#FBAE98, #FBAE98),
+  linear-gradient(#F87854, #F87854);
+  background-size: 100% 2px, 100% 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  transition: background-size 0.275s linear;
+}
+
+.inline-link:hover {
+  color: var(--color--grey-900);
+  background-size: 0 2px, 100% 2px;
+}
+
+
+
+/* Pill
+----------------------------------------------------------------------------- */
+
+.pill {
+  color: var(--color--grey-800);
+  display: inline-flex;
+  padding-inline: 18px;
+  padding-block: 8px;
+  border-radius: 20px;
+  background: var(--color--grey-200);
+}
+
