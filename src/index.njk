@@ -30,30 +30,54 @@ layout: "base.njk"
 {# work links #}
 <section class="column section" data-scroll-section>
 	<div class="work-list">
-		<h2 class="subtitle">Recent work</h2>
+		<div>
+			<h2 class="work-list__heading">
+				<span>Selected work</span>
+				<span class="u-grey-500"> 2019 &ndash; present</span>
+			</h2>
+		</div>
 		{# 		
 		divider #}
+		<div class="work-list__line"></div>
 		<div class="work-list__item">
-			<div class="work-list__title-wrap">
-				<h3 class="work-list__title">7bridges Design System</h3>
-				<p class="work-list__desc">
-					Working on evoling the 7bridges design system
+			<div>
+				<span class="subtitle">7bridges</span>
+				<h3 class="work-list__item-title">Design System</h3>
+				<p class="work-list__item-desc">
+					Evolving the platform&apos;s design system
 				</p>
 			</div>
-			<div class="work-list__btn">
-				<a href="/about" class="btn-link">
+			<div>
+				<a href="/work/design-system-7b" class="btn-link">
 					<span>View case study</span>
-					{% include "svg/arrow-right.svg" %}
+					{% include "./images/svg/arrow-right.svg" %}
 				</a>
 			</div>
 		</div>
-	</div>
+		<div class="work-list__line"></div>
+		<div class="work-list__item">
+			<div>
+				<span class="subtitle">7bridges</span>
+				<h3 class="work-list__item-title">Provider accounts UI</h3>
+				<p class="work-list__item-desc">
+					Provide users with better visibility and understanding of Provider accounts data
+				</p>
+			</div>
+			<div> 
+				<span class="pill">
+					Case study coming soon
+				</span>
+			</div>
+		</div>
+		<div class="work-list__line"></div>
+	</div> 
+
 </section>
 
 
 {# work thumbs #}
 <section class="section section--showcase" data-scroll-section>
-	<div class="showcase-wrapper">    
+	<div class="showcase-wrapper">
 		<div class="showcase__grid-row showcase__grid-row--1" data-scroll 
 		data-scroll-direction="horizontal" 
 		data-scroll-speed="-2">
