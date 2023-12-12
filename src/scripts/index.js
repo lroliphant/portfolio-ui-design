@@ -35,3 +35,43 @@
 // ScrollTrigger.addEventListener('refresh', () => scroller.update())
 
 // ScrollTrigger.refresh()
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+function initScrolltriggerAnimations() {
+  // Scrolltrigger Animation : Span Lines Intro Home
+  if(document.querySelector(".span-lines.animate")) {
+    $(".span-lines.animate").each(function (index) {
+      let triggerElement = $(this);
+      let targetElement = $(".span-lines.animate .span-line-inner");
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerElement,
+          toggleActions:'play none none reset', 
+          start: "0% 100%",
+          end: "100% 0%"
+        }
+      });
+      if(targetElement) {
+        tl.from(targetElement, {
+          y: "100%",
+          stagger: .01,
+          ease: "power3.out",
+          duration: 1,
+          delay: 0
+        });
+      }
+    });
+    }
+}
+
+
+function initScript() {
+  initScrolltriggerAnimations();
+}
+
+// need to run initScript fn at some point
