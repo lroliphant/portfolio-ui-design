@@ -4,10 +4,159 @@ layout: "base.njk"
 permalink: about/index.html
 ---
 
-{% from 'macros/intro-picture.njk' import introPicture with context %}
+{% from 'macros/about-picture.njk' import aboutPicture with context %}
 
-<section class="column" data-scroll-section>
-  <div class="u-center u-pv-lg">
-    <h2 class="u-tx-5xl">Coming soon</h2>
+
+
+{# intro #}
+
+<section class="column section" data-scroll-section>
+  <div class="main-grid about">
+    <div class="about__imgs">
+      {{ aboutPicture(context='1') }}
+    </div>
+    <div class="about__block">
+      <h2 class="about__heading">
+        UI designer
+      </h2>
+      {# add more copy about me? #}
+      <div class="photos__btn">
+        <a href="/about" class="btn-link">
+          {% include "./../../images/svg/arrow-path.svg" %}
+          <span>More photos</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{# work timeline #}
+<section class="column section" data-scroll-section>
+	<div class="main-grid work-experience" id="work-experience">
+    <div class="experience" data-scroll data-scroll-sticky data-scroll-target="#work-experience">
+      <div class="experience__block">
+        <h3 class="experience__heading">Experience</h3>
+        <p class="experience__desc">
+          Designer and former engineer with nearly two years of experience in UI design and 6+ years in frontend development. Working in design and engineering, at startups as well as small teams within bigger companies, has allowed me to develop a wide range of multi-disciplinary skills in diverse contexts.
+        </p>
+        <p class="experience__desc">
+          {# Experience working on a design system as both a frontend engineer and a designer has given me a unique insight into the challenges of creating and maintaining design systems from both perspectives. I can translate design concepts into interactive prototypes to test ideas or collaborate with engineering teams to bring designs to life. As a former frontend engineer I have a good view of what is technically feasible. 
+           #}
+          I use my skills, spanning the intersection between design and engineering, to mitigate risk, create flexible and scalable design systems and build intutive and engaging experiences.
+        </p>
+      </div>
+    </div>
+    <div class="career">
+      <div class="career__block">
+        <div class="career__date">Feb 2022 &ndash; present</div>
+        <div class="career__timeline">
+          <div class="timeline__dot"></div>
+        </div>
+        <div class="career__job">
+          <h4 class="career__company">
+            7bridges
+          </h4>
+          <h5 class="career__role">
+            UI Designer
+          </h5>
+          <p class="career__desc">
+            Started at 7bridges as a junior UI designer and progressed to a mid-level role in just over a year. 7bridges offers a data-driven, web-based platform for analysis, optimisation and execution of supply chains.
+          </p>
+          <p class="career__desc">
+            Work daily in Figma on detailed UI designs to complement the wider user journey. Build and maintain a design system that drives reusability and consistency across the platform. Use HTML and CSS to ideate and prototype interactions. Own the QA of the platform interface - reviewing new UI features to ensure they adhere to our design standards. Work closely with our engineers to ensure successful implementation of designs and prototypes, as well as working together on solutions for existing usability issues. Collaborate with other designers, product managers and engineers to understand user needs, ideate on possible solutions and deliver those to our customers in the form of innovative features and intuitive interfaces.
+          </p>
+        </div>
+      </div>
+      <div class="career__block">
+        <div class="career__date">Oct 2015 &ndash; Feb 2022</div>
+        <div class="career__timeline">
+          <div class="timeline__dot"></div>
+        </div>
+        <div class="career__job">
+          <h4 class="career__company">
+            Funding Circle
+          </h4>
+          <h5 class="career__role">
+            Frontend engineer
+          </h5>
+          <p class="career__desc">
+            Worked in a cross-functional team responsible for improving the direct borrower instant decision product and onboarding new segments onto the new platform. Contributed to the building and maintenance of our design system from a frontend perspective. Worked in a data-driven, experimentation-led, growth team, focussed on building out and testing features designed to improve the experience for new and returning users.
+          </p>
+        </div>
+      </div>
+      <div class="career__block">
+        <div class="career__date">Sep 2013 &ndash; June 2015</div>
+        <div class="career__timeline">
+          <div class="timeline__dot"></div>
+        </div>
+        <div class="career__job">
+          <h4 class="career__company">
+            Selfridges
+          </h4>
+          <h5 class="career__role">
+            Web developer
+          </h5>
+          <p class="career__desc">
+            Built and optimised responsive email templates to support email marketing programme. Created, maintained and updated content on Selfridges.com.
+          </p>
+        </div>
+      </div>
+      <div class="career__block">
+        <div class="career__date">May 2012 &ndash; Sep 2013</div>
+        <div class="career__timeline career__timeline--last">
+          <div class="timeline__dot"></div>
+        </div>
+        <div class="career__job">
+          <h4 class="career__company">
+            Mr Porter
+          </h4>
+          <h5 class="career__role">
+            Web producer
+          </h5>
+          <p class="career__desc">
+            Built engaging editorial features and homepage content for the weekly publication of The Journal on MRPORTER.com.
+          </p>
+        </div>
+      </div>
+    </div>
+	</div> 
+</section>
+
+{# add download CV button #}
+
+<section class="column section" data-scroll-section>
+	<div class="main-grid">
+    <div class="toolkit">
+      <div class="toolkit__block">
+        <h4 class="toolkit__heading">Skills</h4>
+        <ul class="toolkit__list">
+          <li>UI/UX</li>
+          <li>Design systems</li>
+          <li>Prototyping</li>
+          <li>Animation</li>
+          <li>Data visualisation</li>
+          <li>Iconography</li>
+          <li>Digital accessibility (A11y)</li>
+        </ul>
+      </div>
+      <div class="toolkit__block">
+        <h4 class="toolkit__heading">Tools</h4>
+        <ul class="toolkit__list">
+          <li>Figma/FigJam</li>
+          <li>Sketch</li>
+          <li>Git</li>
+        </ul>
+      </div>
+      <div class="toolkit__block"s>
+        <h4 class="toolkit__heading">Technologies</h4>
+        <ul class="toolkit__list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

@@ -1,0 +1,45 @@
+{% set formats = [
+	'webp'
+] %}
+
+{% set widths = [
+	'1200',
+	'1080',
+	'800',
+	'500'
+] %}
+
+{% set sizes = [
+	'(max-width: 479px) 100vw',
+	'(max-width: 991px) 276px',
+	'22vw'
+] %}
+
+{% macro aboutPicture(
+	context
+) %}
+	<picture class="about__picture">
+		{% for format in formats %}
+			<source
+				srcset="
+					{%- for width in widths -%}
+						/images/about/about{{context}}-{{ width }}.{{ format }} {{ width }}w
+						{{- ',' if not loop.last -}}
+					{%- endfor -%}
+				"
+				sizes="
+					{%- for size in sizes -%}
+						{{- size -}}
+						{{- ',' if not loop.last -}}
+					{%- endfor -%}
+				"
+				type="image/{{ format }}"
+			>
+		{% endfor %}
+		<img class="about__photo"
+			src="/images/about/about{{context}}.jpg"
+			fetchpriority="high"
+			alt="Image of me ..."
+		>
+	</picture>
+{% endmacro %}
