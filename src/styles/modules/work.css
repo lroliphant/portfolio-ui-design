@@ -1,17 +1,9 @@
-
-.ds-text-wrap {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  column-gap: var(--grid--gutter);
-}
-
 .ds-text-grid {
-  grid-column: 2 / span 6;
   padding-bottom: 48px;
 }
 
 .ds-text__heading--primary {
-  font-size: var(--font--size-3xlarge);
+  font-size: var(--font--size-4xlarge);
   line-height: 0.95;
   padding-top: 8px;
   padding-bottom: 16px;
@@ -33,20 +25,20 @@ h3.ds-text__heading {
 .ds-text__desc {
   /* font-size: var(--font--size-3xlarge); */
   line-height: 1.6;
-  color: var(--color--grey-500);
+  color: var(--color--text-secondary);
   padding-bottom: 16px;
 }
 
 .ds-text__list {
   margin-left: 22px;
   list-style: none;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .ds-text__list-item {
   color: var(--color--grey-500);
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .ds-text__list-item::before {
@@ -90,7 +82,6 @@ h3.ds-text__heading {
 /* .ds-text__list .ds-text__list-item:nth-child(4n) {
   --rotation: 9;
 } */
-
 
 
 .ds-img-grid {
@@ -263,10 +254,116 @@ h3.ds-text__heading {
 }
 
 
-@media (width > 1024px) {
-  .ds-text-grid {
-    grid-column: 2 / span 4;
+/* Definition list cards
+----------------------------------------------------------------------------- */
+
+.ds-dl__intro {
+  padding-bottom: 4px;
+}
+
+@media (width > 800px) {
+  .ds-dl__intro {
+    grid-column: 2/span 6;
+  }
+}
+
+.ds-card__title {
+  padding-top: 20px;
+  padding-bottom: 4px;
+  font-size: var(--font--size-medium);
+}
+
+.ds-card__desc {
+  line-height: 1.6;
+  color: var(--color--text-secondary);
+}
+
+.ds-card__visual {
+  display: inline-flex;
+  border-radius: 10px;
+  background: var(--color--grey-100);
+}
+
+.ds-card {
+  padding-bottom: 40px;
+}
+
+.ds-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+/* .ds-imgs img {
+  width: 100%;
+} */
+
+
+/* .ds-visual-card {
+  width: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  border-radius: 10px;
+} */
+
+/* .ds-progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #D0D3D9;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ds-progress-bar__tracker {
+  width: 100%;
+  height:12px;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.ds-progress-bar__marker {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  background-color: #132140;
+} */
+
+
+@media (width > 800px) {
+  .ds-grid {
+    display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: var(--grid--gutter);
+    row-gap: 1rem;
+	}
+
+  .ds-dl-grid, .ds-card-grid {
+    grid-column: 2 / span 10;
     padding-bottom: 64px;
+  }
+  
+  .ds-text-grid {
+    grid-column: 2 / span 6;
+    padding-bottom: 64px;
+  }
+
+  .ds-dl, .ds-cards {
+    /* display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; */
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: calc(var(--grid--gutter) * 2.6);
   }
 
   .ds-img-grid {
@@ -293,4 +390,9 @@ h3.ds-text__heading {
   }
 }
 
+
+.ds__caption {
+  color: var(--color--grey-500);
+  font-size: var(--font--size-small);
+}
 
