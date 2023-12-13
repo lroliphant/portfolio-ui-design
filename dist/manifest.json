@@ -1,0 +1,22 @@
+{
+	"name": "Lucy Oliphant",
+	"description": "UI Designer and Developer",
+	"lang": "en",
+	"dir": "ltr",
+	"id": "/",
+	"start_url": "/",
+	"display": "browser",
+	"orientation": "natural",
+	"icons": [
+		{
+			"src": "/src/images/logo/192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/src/images/logo/512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}
