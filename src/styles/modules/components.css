@@ -4,9 +4,10 @@
 .btn-link {
   font-size: var(--font--size-regular);
   line-height: 1;
-  border-radius: 40px;
+  border-radius: 48px;
   padding: 19px 30px;
   color: var(--color--grey-900);
+  background: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;

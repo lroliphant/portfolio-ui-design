@@ -34,7 +34,9 @@
 		<nav class="nav" aria-label="Navigation menu" dir="ltr">
 			<ul class="nav__items" aria-label="Site navigation" dir="ltr">
 
-				
+				<li class="nav__item ml-auto">
+					<a href="/about" class="nav__link">About</a>
+				</li>
 				<li class="nav__item ml-20">
 					<a href="/work/design-system-7b" class="nav__link">Work</a>
 				</li>
@@ -48,15 +50,12 @@
 					
 
 
-
-
-
-
 <section class="column section" data-scroll-section>
   <div class="main-grid about">
-    <div class="about__imgs">
-      
-	<picture class="about__picture">
+    
+      <div class="about__imgs">
+        
+	<picture data-image-changer class="about__picture is-active">
 		
 			<source
 				srcset="/images/about/about1-1200.webp 1200w,/images/about/about1-1080.webp 1080w,/images/about/about1-800.webp 800w,/images/about/about1-500.webp 500w"
@@ -67,24 +66,90 @@
 		<img class="about__photo"
 			src="/images/about/about1.jpg"
 			fetchpriority="high"
-			alt="Image of me ..."
+			alt="Portrait of Lucy Oliphant in a garden"
 		>
 	</picture>
 
-    </div>
+        
+	<picture data-image-changer class="about__picture ">
+		
+			<source
+				srcset="/images/about/about2-1200.webp 1200w,/images/about/about2-1080.webp 1080w,/images/about/about2-800.webp 800w,/images/about/about2-500.webp 500w"
+				sizes="(max-width: 479px) 100vw,(max-width: 991px) 276px,22vw"
+				type="image/webp"
+			>
+		
+		<img class="about__photo"
+			src="/images/about/about2.jpg"
+			fetchpriority="high"
+			alt=""
+		>
+	</picture>
+
+        
+	<picture data-image-changer class="about__picture ">
+		
+			<source
+				srcset="/images/about/about3-1200.webp 1200w,/images/about/about3-1080.webp 1080w,/images/about/about3-800.webp 800w,/images/about/about3-500.webp 500w"
+				sizes="(max-width: 479px) 100vw,(max-width: 991px) 276px,22vw"
+				type="image/webp"
+			>
+		
+		<img class="about__photo"
+			src="/images/about/about3.jpg"
+			fetchpriority="high"
+			alt=""
+		>
+	</picture>
+
+        
+	<picture data-image-changer class="about__picture ">
+		
+			<source
+				srcset="/images/about/about4-1200.webp 1200w,/images/about/about4-1080.webp 1080w,/images/about/about4-800.webp 800w,/images/about/about4-500.webp 500w"
+				sizes="(max-width: 479px) 100vw,(max-width: 991px) 276px,22vw"
+				type="image/webp"
+			>
+		
+		<img class="about__photo"
+			src="/images/about/about4.jpg"
+			fetchpriority="high"
+			alt=""
+		>
+	</picture>
+
+        
+	<picture data-image-changer class="about__picture ">
+		
+			<source
+				srcset="/images/about/about5-1200.webp 1200w,/images/about/about5-1080.webp 1080w,/images/about/about5-800.webp 800w,/images/about/about5-500.webp 500w"
+				sizes="(max-width: 479px) 100vw,(max-width: 991px) 276px,22vw"
+				type="image/webp"
+			>
+		
+		<img class="about__photo"
+			src="/images/about/about5.jpg"
+			fetchpriority="high"
+			alt=""
+		>
+	</picture>
+
+      </div>
+    
+
     <div class="about__block">
       <h2 class="about__heading">
         UI designer
       </h2>
-      
+      <p class="about__desc">I use my skills, spanning the intersection between design and engineering, to mitigate risk, create flexible and scalable design systems and build intuitive and engaging experiences.</p>
       <div class="photos__btn">
-        <a href="/about" class="btn-link">
+        <button class="btn-link" data-image-changer-button>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.30628 9.67069C4.59276 4.8695 9.52779 2.02026 14.329 3.30673C15.9114 3.73074 17.2836 4.55229 18.3648 5.63538C18.3649 5.63547 18.3647 5.6353 18.3648 5.63538L20.2654 7.53594V4.35578C20.2654 3.94156 20.6011 3.60578 21.0154 3.60578C21.4296 3.60578 21.7654 3.94156 21.7654 4.35578V9.34838C21.7654 9.76259 21.4296 10.0984 21.0154 10.0984H16.0228C15.6085 10.0984 15.2728 9.76259 15.2728 9.34838C15.2728 8.93417 15.6085 8.59838 16.0228 8.59838H19.2065L17.3039 6.69581C16.404 5.79426 15.2617 5.10958 13.9408 4.75562C9.93976 3.68356 5.82723 6.05793 4.75517 10.0589C4.64796 10.459 4.23671 10.6965 3.83661 10.5893C3.43651 10.482 3.19907 10.0708 3.30628 9.67069ZM20.1626 13.4109C20.5627 13.5181 20.8001 13.9293 20.6929 14.3294C19.4065 19.1306 14.4714 21.9799 9.67024 20.6934C8.08787 20.2694 6.71567 19.4479 5.63452 18.3648L3.73413 16.4632V19.6444C3.73413 20.0586 3.39834 20.3944 2.98413 20.3944C2.56992 20.3944 2.23413 20.0586 2.23413 19.6444V14.6517C2.23413 14.2375 2.56992 13.9017 2.98413 13.9017L7.97677 13.9017C8.39098 13.9017 8.72677 14.2375 8.72677 14.6517C8.72677 15.0659 8.39099 15.4017 7.97677 15.4017L4.79396 15.4017L6.69553 17.3045C7.59538 18.2061 8.73749 18.8906 10.0585 19.2445C14.0595 20.3166 18.172 17.9422 19.2441 13.9412C19.3513 13.5411 19.7625 13.3037 20.1626 13.4109Z" fill="#171717"/>
 </svg>
 
-          <span>More photos</span>
-        </a>
+          <span>Change photo</span>
+        </button>
       </div>
     </div>
   </div>
@@ -98,11 +163,10 @@
       <div class="experience__block">
         <h3 class="experience__heading">Experience</h3>
         <p class="experience__desc">
-          Designer and former engineer with nearly two years of experience in UI design and 6+ years in frontend development. Working in design and engineering, at startups as well as small teams within bigger companies, has allowed me to develop a wide range of multi-disciplinary skills in diverse contexts.
+          Designer and former engineer with nearly two years of experience in UI design and 6+ years in frontend development. Working in design and engineering, at startups as well as small teams within bigger companies, has allowed me to develop a wide range of multi-disciplinary skills in diverse contexts. I work on detailed UI designs to complement the wider user journey and build design systems that drive reusability and consistency. 
         </p>
         <p class="experience__desc">
-          
-          I use my skills, spanning the intersection between design and engineering, to mitigate risk, create flexible and scalable design systems and build intutive and engaging experiences.
+          My experience as an engineer allows me to understand the technical implications of my design decisions. I can translate design concepts into interactive prototypes to test ideas or collaborate with engineering teams to bring designs to life. Experience working on a design system as both a frontend engineer and a designer has given me a unique insight into the challenges of creating and maintaining design systems from both perspectives.
         </p>
       </div>
     </div>
@@ -224,12 +288,12 @@
 				<div class="footer-wrapper column" data-scroll-section>
 	<footer class="footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="-8" data-scroll-position="bottom">
 		<div class="footer__col">
-			<svg class="footer__logo u-pb-16" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg class="footer__logo" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M0 7.5122C0 3.41463 4.43903 0 10.2439 0H13.6585V42.3415H28.6829C33.4634 42.3415 36.878 46.7805 36.878 52.5854V56H8.19512C3.7561 56 0 52.2439 0 45.7561V7.5122Z" fill="#F87854"/>
 				<path d="M56 48.4878C56 52.5854 51.561 56 45.7561 56H42.3415V13.6585H27.3171C22.5366 13.6585 19.122 9.21951 19.122 3.41463V0H47.8049C52.2439 0 56 3.7561 56 10.2439V48.4878Z" fill="#F85775"/>
 			</svg>
-			<p class="footer__title u-pb-20">Exploring new opportunities</p>
-			<p class="footer__subtitle u-pb-8">Get in touch</p>
+			<p class="footer__title">Exploring new opportunities</p>
+			<p class="footer__subtitle">Get in touch</p>
 			<a href="mailto:lucyroseoliphant@gmail.com" class="footer__link footer__link--email" target="_blank">lucyroseoliphant@gmail.com</a>
 		</div>
 		<div class="footer__btm">

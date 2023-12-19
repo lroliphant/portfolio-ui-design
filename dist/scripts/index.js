@@ -1,1 +1,1 @@
-(()=>{gsap.registerPlugin(ScrollTrigger);})();
+(()=>{var i=()=>{let e=Array.from(document.querySelectorAll("[data-image-changer]")),t=e.length;if(!t)return;let a=e.findIndex(r=>r.classList.contains("is-active")),c=a+1===t?0:a+1;document.querySelector(".is-active[data-image-changer]").classList.remove("is-active"),document.querySelector(`[data-image-changer]:nth-child(${c+1})`).classList.add("is-active")},n=document.querySelector("[data-image-changer-button]");n&&n.addEventListener("click",i);})();

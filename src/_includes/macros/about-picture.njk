@@ -15,15 +15,13 @@
 	'22vw'
 ] %}
 
-{% macro aboutPicture(
-	context
-) %}
-	<picture class="about__picture">
+{% macro aboutPicture(num='1', alt='', class='') %}
+	<picture data-image-changer class="about__picture {{ class }}">
 		{% for format in formats %}
 			<source
 				srcset="
 					{%- for width in widths -%}
-						/images/about/about{{context}}-{{ width }}.{{ format }} {{ width }}w
+						/images/about/about{{num}}-{{ width }}.{{ format }} {{ width }}w
 						{{- ',' if not loop.last -}}
 					{%- endfor -%}
 				"
@@ -37,9 +35,9 @@
 			>
 		{% endfor %}
 		<img class="about__photo"
-			src="/images/about/about{{context}}.jpg"
+			src="/images/about/about{{num}}.jpg"
 			fetchpriority="high"
-			alt="Image of me ..."
+			alt="{{alt}}"
 		>
 	</picture>
 {% endmacro %}

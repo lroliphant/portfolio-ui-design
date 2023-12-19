@@ -4,27 +4,30 @@ layout: "base.njk"
 permalink: about/index.html
 ---
 
-{% from 'macros/about-picture.njk' import aboutPicture with context %}
-
-
-
-{# intro #}
+{% from 'macros/about-picture.njk' import aboutPicture %}
 
 <section class="column section" data-scroll-section>
   <div class="main-grid about">
-    <div class="about__imgs">
-      {{ aboutPicture(context='1') }}
-    </div>
+    {# <div> #}
+      <div class="about__imgs">
+        {{ aboutPicture(num='1', alt='Portrait of Lucy Oliphant in a garden', class='is-active') }}
+        {{ aboutPicture(num='2', alt='') }}
+        {{ aboutPicture(num='3', alt='') }}
+        {{ aboutPicture(num='4', alt='') }}
+        {{ aboutPicture(num='5', alt='') }}
+      </div>
+    {# </div> #}
+
     <div class="about__block">
       <h2 class="about__heading">
         UI designer
       </h2>
-      {# add more copy about me? #}
+      <p class="about__desc">I use my skills, spanning the intersection between design and engineering, to mitigate risk, create flexible and scalable design systems and build intuitive and engaging experiences.</p>
       <div class="photos__btn">
-        <a href="/about" class="btn-link">
+        <button class="btn-link" data-image-changer-button>
           {% include "./../../images/svg/arrow-path.svg" %}
-          <span>More photos</span>
-        </a>
+          <span>Change photo</span>
+        </button>
       </div>
     </div>
   </div>
@@ -38,12 +41,10 @@ permalink: about/index.html
       <div class="experience__block">
         <h3 class="experience__heading">Experience</h3>
         <p class="experience__desc">
-          Designer and former engineer with nearly two years of experience in UI design and 6+ years in frontend development. Working in design and engineering, at startups as well as small teams within bigger companies, has allowed me to develop a wide range of multi-disciplinary skills in diverse contexts.
+          Designer and former engineer with nearly two years of experience in UI design and 6+ years in frontend development. Working in design and engineering, at startups as well as small teams within bigger companies, has allowed me to develop a wide range of multi-disciplinary skills in diverse contexts. I work on detailed UI designs to complement the wider user journey and build design systems that drive reusability and consistency. 
         </p>
         <p class="experience__desc">
-          {# Experience working on a design system as both a frontend engineer and a designer has given me a unique insight into the challenges of creating and maintaining design systems from both perspectives. I can translate design concepts into interactive prototypes to test ideas or collaborate with engineering teams to bring designs to life. As a former frontend engineer I have a good view of what is technically feasible. 
-           #}
-          I use my skills, spanning the intersection between design and engineering, to mitigate risk, create flexible and scalable design systems and build intutive and engaging experiences.
+          My experience as an engineer allows me to understand the technical implications of my design decisions. I can translate design concepts into interactive prototypes to test ideas or collaborate with engineering teams to bring designs to life. Experience working on a design system as both a frontend engineer and a designer has given me a unique insight into the challenges of creating and maintaining design systems from both perspectives.
         </p>
       </div>
     </div>
