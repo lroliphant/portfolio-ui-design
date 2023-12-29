@@ -1,5 +1,4 @@
 {% set formats = [
-	'avif',
 	'webp'
 ] %}
 
@@ -24,7 +23,7 @@
 			<source
 				srcset="
 					{%- for width in widths -%}
-						/images/intro/intro-pic-colour-{{ width }}.{{ format }} {{ width }}w
+						/images/intro/intro-pic-{{ width }}.{{ format }} {{ width }}w
 						{{- ',' if not loop.last -}}
 					{%- endfor -%}
 				"
@@ -38,7 +37,7 @@
 			>
 		{% endfor %}
 		<img class="intro__photo"
-			src="/images/intro/intro-pic-colour-2000.jpg"
+			src="/images/intro/intro-pic-2000.jpg"
 			width="600" height="600"
 			fetchpriority="high"
 			alt="Portrait head shot"

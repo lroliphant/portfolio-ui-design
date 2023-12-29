@@ -68,3 +68,44 @@
   border-radius: 20px;
   background: var(--color--grey-200);
 }
+
+
+.quote-wrap {
+  padding-block-start: 9.6rem;
+  padding-block-end: 5.6rem;
+  position: relative;
+}
+
+
+.quote {
+  font-size: var(--font--size-large);
+  padding-block-end: .8rem;
+  padding-inline: 4rem;
+}
+
+.quote::before,
+.quote::after {
+  content: "";
+  background-image: url('../../images/svg/quote-marks.svg');
+  position: absolute;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.quote::before {
+  left: 0;
+  top: 3.2rem;
+}
+
+.quote::after {
+  bottom: 4.8rem;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.quote__author {
+  color: var(--color--grey-500);
+  padding-inline-start: 4rem;
+}

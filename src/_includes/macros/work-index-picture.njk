@@ -1,0 +1,42 @@
+{% set formats = [
+	'webp'
+] %}
+
+{% set widths = [
+	'1974',
+	'1316',
+	'658'
+] %}
+
+{% set sizes = [
+	'(max-width: 479px) 100vw',
+	'(max-width: 991px) 276px',
+	'22vw'
+] %}
+
+{% macro workIndexPicture(name='', alt='', class='') %}
+	<picture data-image-changer class="work-index__pic {{ class }}">
+		{% for format in formats %}
+			<source
+				srcset="
+					{%- for width in widths -%}
+						/images/work/index/index-{{name}}-{{ width }}.{{ format }} {{ width }}w
+						{{- ',' if not loop.last -}}
+					{%- endfor -%}
+				"
+				sizes="
+					{%- for size in sizes -%}
+						{{- size -}}
+						{{- ',' if not loop.last -}}
+					{%- endfor -%}
+				"
+				type="image/{{ format }}"
+			>
+		{% endfor %}
+		<img class="work-index__img"
+			src="/images/work/index/work-index-{{name}}.jpg"
+			fetchpriority="high"
+			alt="{{alt}}"
+		>
+	</picture>
+{% endmacro %}

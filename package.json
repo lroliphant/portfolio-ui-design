@@ -25,6 +25,7 @@
     "@11ty/eleventy": "^2.0.1",
     "esbuild": "^0.19.5",
     "html-minifier": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "terser": "^5.22.0"
   },
   "dependencies": {

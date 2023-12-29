@@ -2,10 +2,53 @@
 title: Lucy Oliphant - Work
 layout: "base.njk"
 permalink: work/index.html
+desc: Work index
 ---
+
+{% from 'macros/work-index-picture.njk' import workIndexPicture %}
 
 <section class="column section" data-scroll-section>
   <div class="u-center">
     <h2 class="u-tx-5xl">Coming soon</h2>
   </div>
 </section>
+
+{# <section class="column section" data-scroll-section>
+	<div class="">
+		<div class="work-index__item">
+      <div>
+        <a href="">
+          {{ workIndexPicture(name='design-system', alt='') }}
+        </a>
+			</div>
+			<div class="work-index__copy">
+				<span class="subtitle">7bridges</span>
+				<h3 class="work-index__item-title">Design System</h3>
+				<p class="work-index__item-desc">
+					Evolving the platform&apos;s design system
+				</p>
+        <a href="/work/design-system-7b" class="btn-link">
+					<span>View case study</span>
+					{% include "./../../images/svg/arrow-right.svg" %}
+				</a>
+			</div>
+		</div>
+		<div class="work-list__line"></div> #}
+		{# <div class="work-list__item">
+			<div>
+				<span class="subtitle">7bridges</span>
+				<h3 class="work-list__item-title">Provider accounts UI</h3>
+				<p class="work-list__item-desc">
+					Provide users with better visibility and management of Provider account data
+				</p>
+			</div>
+			<div>
+				<a href="/work/provider-accounts-7b" class="btn-link">
+					<span>View case study</span>
+					{% include "./../../images/svg/arrow-right.svg" %}
+				</a>
+			</div>
+		</div> #}
+		{# <div class="work-list__line"></div>
+	</div> 
+</section> #}

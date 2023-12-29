@@ -1,5 +1,6 @@
 const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss");
 const esbuild = require('esbuild');
+const yaml = require('js-yaml');
 
 module.exports = (config) => {
 
@@ -8,6 +9,7 @@ module.exports = (config) => {
   config.addPassthroughCopy("src/fonts/*");
   config.addPassthroughCopy("src/styles/**/*");
   config.addPassthroughCopy("src/content/**/*");
+	config.addPassthroughCopy("src/videos/*");
 
   // watch for changes
   config.addWatchTarget("/src/scripts/");
@@ -20,6 +22,11 @@ module.exports = (config) => {
 
   // JavaScript
 	config.addTemplateFormats("js");
+
+	// YAML
+	config.addDataExtension('yml', (contents) => {
+		return yaml.load(contents);
+	});
 
 	config.addExtension("js", {
 		outputFileExtension: "js",

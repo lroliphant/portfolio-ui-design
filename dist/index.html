@@ -31,15 +31,18 @@
 				</svg>
 			<span class="header__text">Lucy Oliphant</span>
 		</a>
-		<nav class="nav" aria-label="Navigation menu" dir="ltr">
+		<nav class="nav" aria-label="Navigation menu" dir="ltr" id="nav">
 			<ul class="nav__items" aria-label="Site navigation" dir="ltr">
 
-				<li class="nav__item ml-auto">
-					<a href="/about" class="nav__link">About</a>
-				</li>
-				<li class="nav__item ml-20">
-					<a href="/work/design-system-7b" class="nav__link">Work</a>
-				</li>
+				
+				
+					
+						
+					
+					<li class="nav__item">
+						<a class="nav__link nav__link--" href="/about/" >About</a>
+					</li>
+				
 			</ul>
 		</nav>
 	</header>
@@ -58,25 +61,20 @@
 	<picture class="intro__picture intro__picture--home">
 		
 			<source
-				srcset="/images/intro/intro-pic-colour-2000.avif 2000w,/images/intro/intro-pic-colour-1280.avif 1280w,/images/intro/intro-pic-colour-960.avif 960w,/images/intro/intro-pic-colour-640.avif 640w"
-				sizes="(min-width: 1760px) 616px,(min-width: 1024) calc(75vw - 20px - 2 * 42px),calc(100vw - 2 * 20px)"
-				type="image/avif"
-			>
-		
-			<source
-				srcset="/images/intro/intro-pic-colour-2000.webp 2000w,/images/intro/intro-pic-colour-1280.webp 1280w,/images/intro/intro-pic-colour-960.webp 960w,/images/intro/intro-pic-colour-640.webp 640w"
+				srcset="/images/intro/intro-pic-2000.webp 2000w,/images/intro/intro-pic-1280.webp 1280w,/images/intro/intro-pic-960.webp 960w,/images/intro/intro-pic-640.webp 640w"
 				sizes="(min-width: 1760px) 616px,(min-width: 1024) calc(75vw - 20px - 2 * 42px),calc(100vw - 2 * 20px)"
 				type="image/webp"
 			>
 		
 		<img class="intro__photo"
-			src="/images/intro/intro-pic-colour-2000.jpg"
+			src="/images/intro/intro-pic-2000.jpg"
 			width="600" height="600"
 			fetchpriority="high"
 			alt="Portrait head shot"
 		>
 	</picture>
 
+		
 		<h2 class="intro__heading">
 			UI designer and former developer, based in London.
 		</h2>
@@ -84,7 +82,15 @@
 			<p class="intro__copy">
 				I love developing and maintaining design systems. I love crafting beautiful interfaces. I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences.
 			</p>
-			
+			<div class="intro__btn">
+				<a href="/about" class="btn-link">
+					<span>Learn more</span>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.46967 2.46967C8.76256 2.17678 9.23744 2.17678 9.53033 2.46967L14.5303 7.46967C14.8232 7.76256 14.8232 8.23744 14.5303 8.53033L9.53033 13.5303C9.23744 13.8232 8.76256 13.8232 8.46967 13.5303C8.17678 13.2374 8.17678 12.7626 8.46967 12.4697L12.1893 8.75H2C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25H12.1893L8.46967 3.53033C8.17678 3.23744 8.17678 2.76256 8.46967 2.46967Z" fill="#171717"/>
+</svg>
+
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -98,8 +104,6 @@
 				<span class="u-grey-500"> 2019 &ndash; present</span>
 			</h2>
 		</div>
-		
-		<div class="work-list__line"></div>
 		<div class="work-list__item">
 			<div>
 				<span class="subtitle">7bridges</span>
@@ -124,13 +128,18 @@
 				<span class="subtitle">7bridges</span>
 				<h3 class="work-list__item-title">Provider accounts UI</h3>
 				<p class="work-list__item-desc">
-					Provide users with better visibility and understanding of Provider accounts data
+					Provide users with better visibility and management of Provider account data
 				</p>
 			</div>
-			<div> 
-				<span class="pill">
-					Case study coming soon
-				</span>
+			
+			<div>
+				<a href="/work/provider-accounts-7b" class="btn-link">
+					<span>View case study</span>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.46967 2.46967C8.76256 2.17678 9.23744 2.17678 9.53033 2.46967L14.5303 7.46967C14.8232 7.76256 14.8232 8.23744 14.5303 8.53033L9.53033 13.5303C9.23744 13.8232 8.76256 13.8232 8.46967 13.5303C8.17678 13.2374 8.17678 12.7626 8.46967 12.4697L12.1893 8.75H2C1.58579 8.75 1.25 8.41421 1.25 8C1.25 7.58579 1.58579 7.25 2 7.25H12.1893L8.46967 3.53033C8.17678 3.23744 8.17678 2.76256 8.46967 2.46967Z" fill="#171717"/>
+</svg>
+
+				</a>
 			</div>
 		</div>
 		<div class="work-list__line"></div>

@@ -9,14 +9,6 @@
   position: relative;
  }
 
-.ml-auto {
-  margin-left: auto;
-}
-
-.ml-20 {
-  margin-left: 20px;
-}
-
 .t-up {
   text-transform: uppercase;
 }
@@ -26,12 +18,6 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-}
-
-
-
-.p-40 {
-  padding: 60px;
 }
 
 .u-bold {
@@ -118,3 +104,30 @@
 .u-pv-lg {
   padding-block: 56px;
 }
+
+
+.u-mb-40 {
+  margin-bottom: 4rem;
+}
+
+.u-mb-16 {
+  margin-bottom: 1.6rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.u-mt-8 {
+  margin-top: 8px;
+}
+
+
+/* layout
+----------------------------------------------------------------------------- */
+
+
