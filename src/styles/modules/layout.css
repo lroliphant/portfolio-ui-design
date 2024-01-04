@@ -11,7 +11,7 @@
 }
 
 /* mobile */
-@media (width < 1024px) {
+@media (width < 991px) {
   .section, .column {
     padding-inline: 20px;
   }
@@ -34,14 +34,14 @@
 }
 
 /* mobile */
-@media (width < 1024px) {
+@media (width < 991px) {
 	.main-grid {
 		row-gap: var(--grid--gutter);
 	}
 }
 
 /* tablet & desktop */
-@media (width >= 1024px) {
+@media (width >= 991px) {
 	.main-grid {
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: var(--grid--gutter);

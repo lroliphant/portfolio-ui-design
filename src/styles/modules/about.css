@@ -65,7 +65,7 @@
 }
 
 /* desktop  & tablet */
-@media (width >= 1024px) {
+@media (width >= 991px) {
   .about {
     grid-column: 3 / span 8;
   }

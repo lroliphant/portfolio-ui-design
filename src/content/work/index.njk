@@ -7,48 +7,66 @@ desc: Work index
 
 {% from 'macros/work-index-picture.njk' import workIndexPicture %}
 
-<section class="column section" data-scroll-section>
+{# <section class="column section" data-scroll-section>
   <div class="u-center">
     <h2 class="u-tx-5xl">Coming soon</h2>
   </div>
-</section>
+</section> #}
 
-{# <section class="column section" data-scroll-section>
-	<div class="">
-		<div class="work-index__item">
-      <div>
-        <a href="">
+<section class="column section main-grid" data-scroll-section>
+  <div class="work-index">
+    <div class="work-index__item work-index__item--start">
+      <div class="work-index__img">
+        <a href="/work/design-system-7b">
           {{ workIndexPicture(name='design-system', alt='') }}
         </a>
-			</div>
-			<div class="work-index__copy">
-				<span class="subtitle">7bridges</span>
-				<h3 class="work-index__item-title">Design System</h3>
-				<p class="work-index__item-desc">
-					Evolving the platform&apos;s design system
-				</p>
-        <a href="/work/design-system-7b" class="btn-link">
-					<span>View case study</span>
-					{% include "./../../images/svg/arrow-right.svg" %}
-				</a>
-			</div>
-		</div>
-		<div class="work-list__line"></div> #}
-		{# <div class="work-list__item">
-			<div>
-				<span class="subtitle">7bridges</span>
-				<h3 class="work-list__item-title">Provider accounts UI</h3>
-				<p class="work-list__item-desc">
-					Provide users with better visibility and management of Provider account data
-				</p>
-			</div>
-			<div>
-				<a href="/work/provider-accounts-7b" class="btn-link">
-					<span>View case study</span>
-					{% include "./../../images/svg/arrow-right.svg" %}
-				</a>
-			</div>
-		</div> #}
-		{# <div class="work-list__line"></div>
-	</div> 
-</section> #}
+      </div>
+      <div class="work-index__copy">
+        <span class="subtitle">7bridges</span>
+        <h3 class="work-index__item-title">Design System</h3>
+        <p class="work-index__item-desc">
+          Evolving the platform&apos;s design system
+        </p>
+        <a href="/work/design-system-7b" class="btn-link btn-link--md">
+          <span>View case study</span>
+          {% include "./../../images/svg/arrow-right.svg" %}
+        </a>
+      </div>
+    </div>
+    <div class="work-index__item work-index__item--end">
+      <div class="work-index__copy">
+        <span class="subtitle">7bridges</span>
+        <h3 class="work-index__item-title">Provider accounts UI</h3>
+        <p class="work-index__item-desc">
+          Providing users with better visibility and control of Provider account data
+        </p>
+        <a href="/work/provider-accounts-7b" class="btn-link btn-link--md">
+          <span>View case study</span>
+          {% include "./../../images/svg/arrow-right.svg" %}
+        </a>
+      </div>
+      <div class="work-index__img">
+        <a href="/work/provider-accounts-7b">
+          {{ workIndexPicture(name='providers', alt='') }}
+        </a>
+      </div>
+    </div>
+    {# <div class="work-list__item">
+      <div>
+        <span class="subtitle">7bridges</span>
+        <h3 class="work-list__item-title">Provider accounts UI</h3>
+        <p class="work-list__item-desc">
+          Provide users with better visibility and management of Provider account data
+        </p>
+      </div>
+      <div>
+        <a href="/work/provider-accounts-7b" class="btn-link btn-link--sm">
+          <span>View case study</span>
+          {% include "./../../images/svg/arrow-right.svg" %}
+        </a>
+      </div>
+    </div> #}
+    {# <div class="work-list__line"></div> #}
+  </div>
+
+</section>

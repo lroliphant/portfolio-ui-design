@@ -120,23 +120,8 @@ p {
   color: var(--color--text-primary);
 }
 
-/* .nav__link--active {
-  color: var(--color--orange-base);
-} */
-
-.nav__link--active::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 3px;
-  bottom: -6px;
-  border-radius: 8px;
-  left: 0;
-  background-color: var(--color--orange-pink);
-}
-
-.nav__link::before {
+.nav__link::before,
+.nav__link--active::after {
   content: "";
   position: absolute;
   display: block;
@@ -146,6 +131,10 @@ p {
   border-radius: 8px;
   left: 0;
   background-color: var(--color--orange-base);
+}
+
+
+.nav__link::before {
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -210,7 +199,7 @@ p {
   position: relative;
 }
 
-.intro__picture::before,
+/* .intro__picture::before,
 .intro__picture::after {
   content: '';
   display: block;
@@ -218,7 +207,7 @@ p {
   height: 50px;
   z-index: 2;
   position: absolute;
-}
+} */
 
 /* .intro__picture::before {
   content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iMTEzIiB2aWV3Qm94PSIwIDAgNzUgMTEzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMC40NzgwNTUgMTUuNjMxOUMwLjQ3ODMwNiA3LjQzODQ0IDkuMzU1NjYgMC42MTA1OTYgMjAuOTY0MiAwLjYxMDU5NkwyNy43OTI4IDAuNjEwNTk2TDI3Ljc5MDIgODUuMjc1OUg1Ny44MzU5QzY3LjM5NTkgODUuMjc1OSA3NC4yMjQyIDk0LjE1MjEgNzQuMjIzOSAxMDUuNzU5TDc0LjIyMzcgMTEyLjU4N0gxNi44NjM3QzcuOTg2NTEgMTEyLjU4NyAwLjQ3NTMxMiAxMDUuMDc3IDAuNDc1NzEgOTIuMTAzOEwwLjQ3ODA1NSAxNS42MzE5WiIgZmlsbD0iI0Y4Nzg1NCIvPgo8L3N2Zz4K");
@@ -245,7 +234,7 @@ p {
   font-size: var(--font--size-regular);
   text-transform: uppercase;
   color: var(--color--grey-900);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.04rem;
 }
 
 .intro__heading {
@@ -267,7 +256,7 @@ p {
 }
 
 /* mobile */
-@media (width < 1024px) {
+@media (width < 991px) {
   .intro__picture::after {
     width: calc(100vw - 2 * 20px);
     height: calc(100vw - 2 * 20px);
@@ -275,7 +264,7 @@ p {
 }
 
 /* desktop  & tablet */
-@media (width >= 1024px) {
+@media (width >= 991px) {
   .intro__picture {
 		grid-row: 1 / span 3;
 		grid-column: 3 / span 4;
@@ -319,7 +308,7 @@ p {
 
 .work-list__heading {
   font-size: var(--font--size-xlarge);
-  padding-block-end: 12px;
+  padding-block-end: 1.2rem;
   display: flex;
   border-bottom: 1.5px solid var(--color--grey-900);
 }

@@ -4,8 +4,7 @@
 .btn-link {
   font-size: var(--font--size-regular);
   line-height: 1;
-  border-radius: 48px;
-  padding: 19px 30px;
+  border-radius: 80px;
   color: var(--color--grey-900);
   background: none;
   cursor: pointer;
@@ -14,9 +13,17 @@
   justify-content: center;
   text-decoration: none;
   border: 1.5px solid var(--color--grey-900);
-  column-gap: 12px;
-  letter-spacing: 0.1rem;
+  column-gap: 8px;
+  letter-spacing: 0.04rem;
   white-space: nowrap;
+}
+
+.btn-link--md {
+  padding: 18px 36px;
+}
+
+.btn-link--sm {
+  padding: 14px 28px;
 }
 
 .btn-link:hover {
@@ -26,9 +33,16 @@
   background-color: var(--color--grey-900);
 }
 
-.btn-link svg {
+.btn-link--md svg {
   width: 20px;
   height: 20px;
+  margin-top: 2px;
+}
+
+.btn-link--md svg {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
 }
 
 .btn-link:hover path {

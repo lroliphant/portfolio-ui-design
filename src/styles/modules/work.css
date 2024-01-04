@@ -388,7 +388,7 @@ h3.cs-text__heading {
     display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: var(--grid--gutter);
-    row-gap: 1rem;
+    row-gap: var(--grid--row-gap-small);
 	}
 
   .cs-dl-grid, .cs-card-grid, .cs-fw-grid {
@@ -476,7 +476,7 @@ h3.cs-text__heading {
 }
 
 
-@media (width >= 1024px) {
+@media (width >= 991px) {
   .grid-12-col {
     display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -495,7 +495,6 @@ h3.cs-text__heading {
   }
 }
 
-
 .video-tile {
   grid-column-start: content-start;
   grid-column-end: content-end;
@@ -506,15 +505,107 @@ h3.cs-text__heading {
   max-width: 100%;
 }
 
+.work-index {
+  display: grid;
+  row-gap: var(--grid--row-gap-xlarge);
+  grid-column: 2 / span 10;
+}
 
+.work-index__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.work-index__copy {
+  padding-block: 2rem;
+}
 
 .work-index__item-title {
   font-size: var(--font--size-3xlarge);
   line-height: 1;
+  padding-top: 0.4rem;
 }
 
 .work-index__item-desc {
   color: var(--color--text-secondary);
-  padding-block: 0.8rem;
+  padding-top: 1.6rem;
+  padding-bottom: 2.4rem;
 }
+
+.work-index__pic {
+  position: relative;
+}
+
+/* .work-index__copy {
+  flex: 0 0 auto;
+} */
+
+/* .work-index__copy, .work-index__img {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.work-index__img {
+  flex-shrink: 1;
+} */
+
+.work-index__copy {
+  flex-basis: 580px;
+}
+
+.work-index__img a {
+  text-decoration: none;
+}
+
+.work-index__img {
+  border-radius: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.work-index__img:hover {
+  transform: scale(1.01); 
+}
+
+.work-index__item--end .work-index__copy {
+  order: 2;
+}
+
+.work-index__item--end .work-index__img {
+  order: 1;
+}
+
+@media (width >= 991px) {
+  .work-index__item {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .work-index__item--start {
+    justify-content: start;
+  }
+
+  .work-index__item--end {
+    justify-content: end;
+  }
+
+  .work-index__item--end .work-index__copy {
+    order: 1;
+  }
+
+  .work-index__item--end .work-index__img {
+    order: 2;
+  }
+
+  .work-index__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 4rem;
+  }
+}
+
+
+
 

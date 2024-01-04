@@ -21,6 +21,7 @@
 						{% set active = 'active' %}
 					{% else %}
 						{% set current = '' %}
+						{% set active = '' %}
 					{% endif %}
 					<li class="nav__item">
 						<a class="nav__link nav__link--{{active}}" href="{{ item.link }}" {{ current | safe }}>

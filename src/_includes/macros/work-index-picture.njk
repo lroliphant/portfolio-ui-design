@@ -9,9 +9,8 @@
 ] %}
 
 {% set sizes = [
-	'(max-width: 479px) 100vw',
-	'(max-width: 991px) 276px',
-	'22vw'
+	'(max-width: 991px) 100vw',
+	'calc(100vw - 2 * 32px)'
 ] %}
 
 {% macro workIndexPicture(name='', alt='', class='') %}
@@ -20,7 +19,7 @@
 			<source
 				srcset="
 					{%- for width in widths -%}
-						/images/work/index/index-{{name}}-{{ width }}.{{ format }} {{ width }}w
+						/images/work/index/work-index-{{name}}-{{ width }}.{{ format }} {{ width }}w
 						{{- ',' if not loop.last -}}
 					{%- endfor -%}
 				"

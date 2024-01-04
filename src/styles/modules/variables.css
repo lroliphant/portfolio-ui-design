@@ -40,5 +40,9 @@
   --container--padding: clamp(2.4rem, 8vw, 4rem);
 
   --grid--gutter: 2rem;
+  --grid--row-gap-small: 1rem;
+  --grid--row-gap-medium: 2rem;
+  --grid--row-gap-large: 4rem;
+  --grid--row-gap-xlarge: 8rem;
 }
 
