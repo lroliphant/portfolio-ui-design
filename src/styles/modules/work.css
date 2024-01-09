@@ -559,7 +559,7 @@ h3.cs-text__heading {
 }
 
 .work-index__img {
-  border-radius: 2rem;
+  border-radius: 0.8rem;
   transition: transform 0.3s ease;
 }
 
