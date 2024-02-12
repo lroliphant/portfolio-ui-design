@@ -40,11 +40,9 @@
 					el: document.querySelector('[data-scroll-container]'),
 					smooth: true,
 
-					// for tablet smooth
-  				// tablet: { smooth: true },
+  				tablet: { breakpoint: 0},
 
-					// for mobile
-					// smartphone: { smooth: true }
+					smartphone: { breakpoint: 0 }
 				});
 
 				scroller.on('scroll', ScrollTrigger.update)
