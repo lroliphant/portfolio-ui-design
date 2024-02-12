@@ -1,53 +1,106 @@
 /* Button
 ----------------------------------------------------------------------------- */
 
-.btn-link {
-  font-size: var(--font--size-regular);
+.btn,
+.link {
   line-height: 1;
-  border-radius: 80px;
   color: var(--color--grey-900);
-  background: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   text-decoration: none;
-  border: 1.5px solid var(--color--grey-900);
-  column-gap: 8px;
   letter-spacing: 0.04rem;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
-.btn-link--md {
+.btn {
+  font-size: var(--font--size-regular);
+  justify-content: center;
+  column-gap: 8px;
+  background: none;
+  border-radius: 80px;
+  border: 1.5px solid var(--color--grey-900);
+}
+
+.btn--md {
   padding: 18px 36px;
 }
 
-.btn-link--sm {
-  padding: 14px 28px;
-}
-
-.btn-link:hover {
+.btn:hover {
   transition: all .2s ease;
   border: 1.5px solid transparent;
   color: #fff;
   background-color: var(--color--grey-900);
 }
 
-.btn-link--md svg {
+.btn:hover path {
+  fill: #fff;
+}
+
+.btn--md svg {
   width: 20px;
   height: 20px;
   margin-top: 2px;
 }
 
-.btn-link--md svg {
-  margin-top: 2px;
-  width: 16px;
-  height: 16px;
+.link {
+  display: flex;
+  column-gap: 8px;
 }
 
-.btn-link:hover path {
-  fill: #fff;
+.link--md {
+  font-size: var(--font--size-regular);
 }
+
+.link--lg {
+  font-size: var(--font--size-medium);
+}
+
+.link-svg {
+  fill: var(--color--grey-900);
+  padding-top: 2px;
+}
+
+.link .link-svg,
+.link .link-txt {
+  display: inline-flex;
+  transition: all .45s;
+}
+
+.link:hover .link-txt,
+.link:hover .link-svg {
+  opacity: .6;
+}
+
+@media (min-width:768px) {
+  .link:hover .link-svg {
+    animation-name: arrow-btn-left-right;
+    animation-duration: .45s;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes arrow-btn-left-right {
+  0% {
+    transform: translate(0)
+  }
+  25% {
+    transform: translate(24px)
+  }
+  50% {
+    transform: translate(0)
+  }
+  75% {
+    transform: translate(12px);
+    opacity: .8
+  }
+  to {
+    transform:translate(4px);
+    opacity: .6
+  }
+}
+
+
 
 
 

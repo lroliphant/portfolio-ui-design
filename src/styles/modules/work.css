@@ -537,19 +537,6 @@ h3.cs-text__heading {
   position: relative;
 }
 
-/* .work-index__copy {
-  flex: 0 0 auto;
-} */
-
-/* .work-index__copy, .work-index__img {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.work-index__img {
-  flex-shrink: 1;
-} */
-
 .work-index__copy {
   flex-basis: 580px;
 }
@@ -558,13 +545,17 @@ h3.cs-text__heading {
   text-decoration: none;
 }
 
+/* .work-index__pic {
+  transform: scale(1); 
+} */
+
 .work-index__img {
   border-radius: 0.8rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
 }
 
 .work-index__img:hover {
-  transform: scale(1.01); 
+  transform: scale(1.02); 
 }
 
 .work-index__item--end .work-index__copy {
