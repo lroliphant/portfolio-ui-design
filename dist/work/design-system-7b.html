@@ -461,10 +461,12 @@
 				const scroller = new LocomotiveScroll({
 					el: document.querySelector('[data-scroll-container]'),
 					smooth: true,
-
-  				tablet: { breakpoint: 0},
-
-					smartphone: { breakpoint: 0 }
+					smartphone: {
+        		smooth: true
+					},
+					tablet: {
+						smooth: true
+					}
 				});
 
 				scroller.on('scroll', ScrollTrigger.update)
