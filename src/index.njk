@@ -14,7 +14,7 @@ layout: "base.njk"
 			<source srcset="/images/intro/intro-pic-2000.webp" type="image/webp" />
 			<img src="/images/intro/intro-pic-2000.webp" />
 		</picture> #}
-		<h2 class="intro__heading">
+		<h2 class="intro__heading is-inview" data-scroll="" data-scroll-speed="3" data-scroll-position="top">
 			UI designer and former developer, based in London.
 		</h2>
 		<div class="intro__copy-btn">
@@ -22,9 +22,9 @@ layout: "base.njk"
 				I love developing and maintaining design systems. I love crafting beautiful interfaces. I use my skills, spanning the intersection of design and development, to create robust, intuitive and engaging digital experiences.
 			</p>
 			<div class="intro__btn">
-				<a href="/about" class="btn-link btn-link--md">
-					<span>Learn more</span>
-					{% include "./images/svg/arrow-right.svg" %}
+				<a href="/about" class="link link--lg">
+					<span class="link-txt">Learn more</span>
+					<span class="link-svg">{% include "./images/svg/arrow-right-long.svg" %}</span>
 				</a>
 			</div>
 		</div>
@@ -49,7 +49,7 @@ layout: "base.njk"
 				</p>
 			</div>
 			<div>
-				<a href="/work/design-system-7b" class="btn-link btn-link--md">
+				<a href="/work/design-system-7b" class="btn btn--md">
 					<span>View case study</span>
 					{% include "./images/svg/arrow-right.svg" %}
 				</a>
@@ -70,7 +70,7 @@ layout: "base.njk"
 				</span>
 			</div> #}
 			<div>
-				<a href="/work/provider-accounts-7b" class="btn-link btn-link--md">
+				<a href="/work/provider-accounts-7b" class="btn btn--md">
 					<span>View case study</span>
 					{% include "./images/svg/arrow-right.svg" %}
 				</a>
