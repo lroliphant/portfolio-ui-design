@@ -1,3 +1,38 @@
+const scroller = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+  smartphone: {
+    smooth: true
+  },
+  tablet: {
+    smooth: true
+  }
+});
+
+scroller.on('scroll', ScrollTrigger.update)
+
+ScrollTrigger.scrollerProxy(
+  '.content-wrapper', {
+      scrollTop(value) {
+      return arguments.length
+        ? scroller.scrollTo(value, 0, 0)
+        : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+});
+
+ScrollTrigger.addEventListener('refresh', () => scroller.update());
+
+ScrollTrigger.refresh();
+
+
 const imageChanger = () => {
   const arr = Array.from(document.querySelectorAll('[data-image-changer]'));
   
